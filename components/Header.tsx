@@ -25,8 +25,8 @@ const Header: React.FC = () => {
 
         <nav className="hidden md:flex space-x-10 text-sm font-medium uppercase tracking-widest">
           <a href="#home" className="hover:text-yellow-600 transition-colors">Home</a>
-          <a href="#services" className="hover:text-yellow-600 transition-colors">What We Do</a>
-          <a href="#who-its-for" className="hover:text-yellow-600 transition-colors">Who It's For</a>
+          <a href="#services" className="hover:text-yellow-600 transition-colors">Our Purpose</a>
+          <a href="#who-its-for" className="hover:text-yellow-600 transition-colors">Our Impact</a>
         </nav>
 
         <div className="hidden md:block">
@@ -50,8 +50,8 @@ const Header: React.FC = () => {
       {mobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 w-full bg-black border-t border-white/10 p-8 space-y-6 flex flex-col items-center animate-fadeIn">
           <a href="#home" onClick={() => setMobileMenuOpen(false)} className="text-lg uppercase tracking-widest">Home</a>
-          <a href="#services" onClick={() => setMobileMenuOpen(false)} className="text-lg uppercase tracking-widest">What We Do</a>
-          <a href="#who-its-for" onClick={() => setMobileMenuOpen(false)} className="text-lg uppercase tracking-widest">Who It's For</a>
+          <a href="#services" onClick={() => setMobileMenuOpen(false)} className="text-lg uppercase tracking-widest">Our Purpose</a>
+          <a href="#who-its-for" onClick={() => setMobileMenuOpen(false)} className="text-lg uppercase tracking-widest">Our Impact</a>
           <a href="#contact" onClick={() => setMobileMenuOpen(false)} className="px-8 py-3 bg-yellow-600 text-black font-bold rounded uppercase tracking-widest">Get Started</a>
         </div>
       )}
