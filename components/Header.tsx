@@ -25,21 +25,20 @@ const Header: React.FC = () => {
 
         <nav className="hidden md:flex space-x-10 text-sm font-medium uppercase tracking-widest">
           <a href="#home" className="hover:text-yellow-600 transition-colors">Home</a>
-          <a href="#services" className="hover:text-yellow-600 transition-colors">Services</a>
-          <a href="#about" className="hover:text-yellow-600 transition-colors">About</a>
-          <a href="#ai-insights" className="hover:text-yellow-600 transition-colors">AI Insights</a>
+          <a href="#services" className="hover:text-yellow-600 transition-colors">What We Do</a>
+          <a href="#who-its-for" className="hover:text-yellow-600 transition-colors">Who It's For</a>
         </nav>
 
         <div className="hidden md:block">
-          <a 
-            href="#contact" 
+          <a
+            href="#contact"
             className="px-6 py-2 bg-yellow-600 text-black font-bold text-xs uppercase tracking-widest rounded hover:bg-yellow-500 transition-all"
           >
             Get Started
           </a>
         </div>
 
-        <button 
+        <button
           className="md:hidden text-white text-2xl"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
@@ -51,8 +50,8 @@ const Header: React.FC = () => {
       {mobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 w-full bg-black border-t border-white/10 p-8 space-y-6 flex flex-col items-center animate-fadeIn">
           <a href="#home" onClick={() => setMobileMenuOpen(false)} className="text-lg uppercase tracking-widest">Home</a>
-          <a href="#services" onClick={() => setMobileMenuOpen(false)} className="text-lg uppercase tracking-widest">Services</a>
-          <a href="#about" onClick={() => setMobileMenuOpen(false)} className="text-lg uppercase tracking-widest">About</a>
+          <a href="#services" onClick={() => setMobileMenuOpen(false)} className="text-lg uppercase tracking-widest">What We Do</a>
+          <a href="#who-its-for" onClick={() => setMobileMenuOpen(false)} className="text-lg uppercase tracking-widest">Who It's For</a>
           <a href="#contact" onClick={() => setMobileMenuOpen(false)} className="px-8 py-3 bg-yellow-600 text-black font-bold rounded uppercase tracking-widest">Get Started</a>
         </div>
       )}
