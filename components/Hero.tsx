@@ -21,13 +21,13 @@ const Hero: React.FC<HeroProps> = ({ linktreeUrl }) => {
       <div className="relative z-20 max-w-7xl mx-auto px-6 md:px-12 w-full">
         <div className="max-w-3xl">
           <div className="inline-block px-4 py-1 border border-yellow-600/50 text-yellow-500 text-xs font-bold tracking-[0.3em] uppercase mb-8 rounded-full">
-            Southeast Multifamily Investments
+            Deal Analysis & Underwriting
           </div>
           <h1 className="text-5xl md:text-8xl font-serif leading-tight mb-8">
-            Private <span className="gradient-text italic">Multifamily</span> Investments
+            Clarity in <span className="gradient-text italic">Multifamily</span> Investing
           </h1>
           <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-xl leading-relaxed">
-            Built for investors who value clarity, smart execution, and a forward-thinking approach to multifamily real estate.
+            We break down multifamily deals and Southeast markets so investors, brokers, and operators understand how deals actually work – the returns, the risks, and the downside — before committing capital.
           </p>
           <div className="flex flex-col sm:flex-row gap-5">
             <a
@@ -36,7 +36,7 @@ const Hero: React.FC<HeroProps> = ({ linktreeUrl }) => {
               rel="noopener noreferrer"
               className="px-10 py-5 bg-yellow-600 text-black font-extrabold rounded hover:bg-yellow-500 transition-all text-center uppercase tracking-widest"
             >
-              Join Our Investor List
+              See How Deals Really Work
             </a>
             <a
               href="https://calendly.com/blackstarholdings1"
@@ -44,9 +44,10 @@ const Hero: React.FC<HeroProps> = ({ linktreeUrl }) => {
               rel="noopener noreferrer"
               className="px-10 py-5 glass-panel text-white font-bold rounded hover:bg-white/10 transition-all text-center uppercase tracking-widest border border-white/20"
             >
-              Schedule Consultation
+              Review a Deal / Intro Call
             </a>
           </div>
+          <p className="text-sm text-gray-500 mt-6">Join 95+ investors and get deal breakdowns plus a free newsletter.</p>
         </div>
       </div>
 

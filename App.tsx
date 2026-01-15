@@ -1,10 +1,8 @@
 
+
 import React, { useState } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import Services from './components/Services';
-import GeminiAssistant from './components/GeminiAssistant';
-import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
 
 const App: React.FC = () => {
@@ -43,66 +41,105 @@ const App: React.FC = () => {
           <Hero linktreeUrl={linktreeUrl} />
         </section>
 
-        <section id="ai-insights" className="py-20 bg-[#0a0a0a] relative overflow-hidden">
-          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-yellow-600/50 to-transparent"></div>
-          <GeminiAssistant />
-        </section>
 
-        <section id="services" className="py-24 px-6 md:px-12 max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-serif mb-4">Multifamily Investments for Long-Term Growth</h2>
-            <div className="w-24 h-1 bg-yellow-600 mx-auto mb-6"></div>
-            <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-              We focus on underperforming and distressed multifamily assets across high-growth Southeast markets, delivering risk-adjusted returns.
-            </p>
-          </div>
-          <Services />
-        </section>
-
-        <section id="about" className="py-24 bg-[#0a0a0a]">
-          <div className="max-w-7xl mx-auto px-6 md:px-12 grid md:grid-cols-2 gap-16 items-center">
-            <div className="relative">
-              <img
-                src="https://images.unsplash.com/photo-1573164067005-446df1678171?auto=format&fit=crop&q=80&w=1000"
-                alt="Professional consultation"
-                className="rounded-2xl shadow-2xl border border-white/10"
-              />
-              <div className="absolute -bottom-6 -right-6 glass-panel p-6 rounded-xl hidden md:block">
-                <p className="text-yellow-500 font-bold text-3xl">10+</p>
-                <p className="text-sm text-gray-400 uppercase tracking-widest">Years Experience</p>
+        {/* Metrics Row */}
+        <section className="py-16 bg-[#0a0a0a] border-y border-white/5">
+          <div className="max-w-7xl mx-auto px-6 md:px-12">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              <div className="text-center">
+                <div className="text-4xl md:text-5xl font-bold text-yellow-600 mb-2">14–20%</div>
+                <div className="text-sm text-gray-400 uppercase tracking-widest">Target IRR</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl md:text-5xl font-bold text-yellow-600 mb-2">95+</div>
+                <div className="text-sm text-gray-400 uppercase tracking-widest">Active Investors</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl md:text-5xl font-bold text-yellow-600 mb-2">5+</div>
+                <div className="text-sm text-gray-400 uppercase tracking-widest">Markets Covered</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl md:text-5xl font-bold text-yellow-600 mb-2">$50M+</div>
+                <div className="text-sm text-gray-400 uppercase tracking-widest">Deals Underwritten</div>
               </div>
             </div>
-            <div>
-              <span className="text-yellow-600 font-bold tracking-widest uppercase text-sm">Who We Are</span>
-              <h2 className="text-4xl md:text-5xl font-serif mt-4 mb-6 leading-tight">Clear Operational Focus That Delivers Results</h2>
-              <p className="text-gray-400 text-lg mb-8 leading-relaxed">
-                The Blackstar Group puts equity and opportunity back into the hands of investors. Through value-add multifamily acquisitions in Southeast markets, we deliver attractive, risk-adjusted returns while opening doors to lasting commercial real estate ownership.
+          </div>
+        </section>
+
+        {/* What We Do */}
+        <section id="services" className="py-24 px-6 md:px-12 max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-serif mb-4">What We Do</h2>
+            <div className="w-24 h-1 bg-yellow-600 mx-auto mb-6"></div>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="glass-panel p-8 rounded-2xl hover:bg-white/5 transition-all duration-500 group border border-white/5 hover:border-yellow-600/30">
+              <div className="w-16 h-16 bg-yellow-600/10 flex items-center justify-center rounded-xl mb-6 group-hover:bg-yellow-600 transition-colors">
+                <i className="fas fa-chart-line text-2xl text-yellow-600 group-hover:text-black transition-colors"></i>
+              </div>
+              <h3 className="text-2xl font-serif mb-4">Underwrite Opportunities</h3>
+              <p className="text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors">
+                Underwrite value-add multifamily opportunities for investors and operators
               </p>
-              <ul className="space-y-4 mb-10">
-                {[
-                  "Operational Precision",
-                  "Conservative Underwriting",
-                  "Decades of Experience",
-                  "Downside Protection"
-                ].map((item, idx) => (
-                  <li key={idx} className="flex items-center space-x-3">
-                    <i className="fas fa-check-circle text-yellow-600"></i>
-                    <span className="text-gray-300">{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <a
-                href="#services"
-                className="inline-block px-8 py-4 border border-yellow-600 text-yellow-600 hover:bg-yellow-600 hover:text-black transition-all duration-300 font-bold rounded-lg uppercase tracking-widest"
-              >
-                Explore Services
-              </a>
+            </div>
+            <div className="glass-panel p-8 rounded-2xl hover:bg-white/5 transition-all duration-500 group border border-white/5 hover:border-yellow-600/30">
+              <div className="w-16 h-16 bg-yellow-600/10 flex items-center justify-center rounded-xl mb-6 group-hover:bg-yellow-600 transition-colors">
+                <i className="fas fa-handshake text-2xl text-yellow-600 group-hover:text-black transition-colors"></i>
+              </div>
+              <h3 className="text-2xl font-serif mb-4">Support Brokers</h3>
+              <p className="text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors">
+                Support real estate agents and brokers by analyzing commercial deals and return scenarios
+              </p>
+            </div>
+            <div className="glass-panel p-8 rounded-2xl hover:bg-white/5 transition-all duration-500 group border border-white/5 hover:border-yellow-600/30">
+              <div className="w-16 h-16 bg-yellow-600/10 flex items-center justify-center rounded-xl mb-6 group-hover:bg-yellow-600 transition-colors">
+                <i className="fas fa-calculator text-2xl text-yellow-600 group-hover:text-black transition-colors"></i>
+              </div>
+              <h3 className="text-2xl font-serif mb-4">Break Down Deals</h3>
+              <p className="text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors">
+                Break down pricing, cash flow, and downside so deals can be evaluated with confidence
+              </p>
             </div>
           </div>
         </section>
 
-        <section id="testimonials" className="py-24">
-          <Testimonials />
+        {/* Who It's For */}
+        <section id="who-its-for" className="py-24 bg-[#0a0a0a]">
+          <div className="max-w-7xl mx-auto px-6 md:px-12">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-serif mb-4">Who This Is For</h2>
+              <div className="w-24 h-1 bg-yellow-600 mx-auto mb-6"></div>
+            </div>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="text-center p-8">
+                <div className="w-20 h-20 bg-yellow-600/10 flex items-center justify-center rounded-full mx-auto mb-6">
+                  <i className="fas fa-user-tie text-3xl text-yellow-600"></i>
+                </div>
+                <h3 className="text-2xl font-serif mb-4">Investors</h3>
+                <p className="text-gray-400 leading-relaxed">
+                  Evaluating multifamily opportunities
+                </p>
+              </div>
+              <div className="text-center p-8">
+                <div className="w-20 h-20 bg-yellow-600/10 flex items-center justify-center rounded-full mx-auto mb-6">
+                  <i className="fas fa-briefcase text-3xl text-yellow-600"></i>
+                </div>
+                <h3 className="text-2xl font-serif mb-4">Brokers & Agents</h3>
+                <p className="text-gray-400 leading-relaxed">
+                  Stepping into commercial deals
+                </p>
+              </div>
+              <div className="text-center p-8">
+                <div className="w-20 h-20 bg-yellow-600/10 flex items-center justify-center rounded-full mx-auto mb-6">
+                  <i className="fas fa-building text-3xl text-yellow-600"></i>
+                </div>
+                <h3 className="text-2xl font-serif mb-4">Operators</h3>
+                <p className="text-gray-400 leading-relaxed">
+                  Who want a second set of eyes on underwriting
+                </p>
+              </div>
+            </div>
+          </div>
         </section>
 
         <section id="contact" className="py-24 bg-black relative">
