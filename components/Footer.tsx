@@ -1,10 +1,86 @@
 
-import React from 'react';
+
+import React, { useState } from 'react';
 
 const Footer: React.FC = () => {
+  const [email, setEmail] = useState('');
+  const [newsletterStatus, setNewsletterStatus] = useState<'idle' | 'sending' | 'success'>('idle');
+
+  const handleNewsletterSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email) return;
+    
+    setNewsletterStatus('sending');
+    
+    // Simulate API call
+    setTimeout(() => {
+      setNewsletterStatus('success');
+      setEmail('');
+      setTimeout(() => setNewsletterStatus('idle'), 5000);
+    }, 1500);
+  };
+
   return (
     <footer className="bg-black py-20 border-t border-white/5">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
+        {/* Newsletter Section */}
+        <div className="mb-16 glass-panel p-8 md:p-12 rounded-2xl border border-yellow-600/20 bg-gradient-to-br from-yellow-600/5 to-transparent">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <div className="flex items-center space-x-2 mb-4">
+                <i className="fas fa-envelope text-yellow-600 text-xl"></i>
+                <span className="text-xs uppercase tracking-widest text-yellow-600 font-bold">Stay Informed</span>
+              </div>
+              <h3 className="text-3xl md:text-4xl font-serif mb-3">Join Our Newsletter</h3>
+              <p className="text-gray-400">
+                Receive exclusive market insights, investment opportunities, and wealth-building strategies directly to your inbox.
+              </p>
+            </div>
+            
+            <div>
+              {newsletterStatus === 'success' ? (
+                <div className="flex items-center space-x-3 bg-green-600/10 border border-green-600/30 rounded-lg p-4 animate-fadeIn">
+                  <div className="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0">
+                    <i className="fas fa-check text-black"></i>
+                  </div>
+                  <div>
+                    <p className="font-bold text-green-400">Welcome to the Circle!</p>
+                    <p className="text-sm text-gray-400">Check your inbox for confirmation.</p>
+                  </div>
+                </div>
+              ) : (
+                <form onSubmit={handleNewsletterSubmit} className="flex flex-col sm:flex-row gap-3">
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="your.email@example.com"
+                    required
+                    className="flex-1 bg-white/5 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-yellow-600 transition-colors"
+                  />
+                  <button
+                    type="submit"
+                    disabled={newsletterStatus === 'sending'}
+                    className="px-6 py-3 bg-yellow-600 text-black font-bold rounded-lg hover:bg-yellow-500 transition-all uppercase tracking-widest text-sm flex items-center justify-center space-x-2 disabled:opacity-50"
+                  >
+                    {newsletterStatus === 'sending' ? (
+                      <>
+                        <i className="fas fa-circle-notch animate-spin"></i>
+                        <span>Joining...</span>
+                      </>
+                    ) : (
+                      <>
+                        <span>Subscribe</span>
+                        <i className="fas fa-arrow-right"></i>
+                      </>
+                    )}
+                  </button>
+                </form>
+              )}
+            </div>
+          </div>
+        </div>
+
         <div className="grid md:grid-cols-4 gap-12 mb-16">
           <div className="col-span-2">
             <div className="flex items-center space-x-2 mb-6">
