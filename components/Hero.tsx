@@ -11,9 +11,9 @@ const Hero: React.FC<HeroProps> = ({ linktreeUrl }) => {
       {/* Background Overlay */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent z-10"></div>
-        <img 
-          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2000" 
-          alt="Modern skyscraper" 
+        <img
+          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2000"
+          alt="Modern skyscraper"
           className="w-full h-full object-cover opacity-50"
         />
       </div>
@@ -21,28 +21,30 @@ const Hero: React.FC<HeroProps> = ({ linktreeUrl }) => {
       <div className="relative z-20 max-w-7xl mx-auto px-6 md:px-12 w-full">
         <div className="max-w-3xl">
           <div className="inline-block px-4 py-1 border border-yellow-600/50 text-yellow-500 text-xs font-bold tracking-[0.3em] uppercase mb-8 rounded-full">
-            The Pinnacle of Investment Excellence
+            Southeast Multifamily Investments
           </div>
           <h1 className="text-5xl md:text-8xl font-serif leading-tight mb-8">
-            Empowering Your <span className="gradient-text italic">Wealth Journey</span>
+            Private <span className="gradient-text italic">Multifamily</span> Investments
           </h1>
           <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-xl leading-relaxed">
-            Blackstar Investments provides strategic guidance and exclusive opportunities in real estate, private equity, and wealth management.
+            Built for investors who value clarity, smart execution, and a forward-thinking approach to multifamily real estate.
           </p>
           <div className="flex flex-col sm:flex-row gap-5">
-            <a 
-              href={linktreeUrl}
+            <a
+              href="https://forms.gle/ahYv3GhDamQDjZCo9"
               target="_blank"
               rel="noopener noreferrer"
               className="px-10 py-5 bg-yellow-600 text-black font-extrabold rounded hover:bg-yellow-500 transition-all text-center uppercase tracking-widest"
             >
-              Start Investing
+              Join Our Investor List
             </a>
-            <a 
-              href="#services" 
+            <a
+              href="https://calendly.com/blackstarholdings1"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-10 py-5 glass-panel text-white font-bold rounded hover:bg-white/10 transition-all text-center uppercase tracking-widest border border-white/20"
             >
-              Our Services
+              Schedule Consultation
             </a>
           </div>
         </div>

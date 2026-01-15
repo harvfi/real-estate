@@ -4,34 +4,19 @@ import { ServiceCard as ServiceCardType } from '../types';
 
 const services: ServiceCardType[] = [
   {
-    title: "Real Estate Acquisition",
-    description: "Access to off-market residential and commercial properties with high yield potential and strategic locations.",
+    title: "Value-Add Acquisitions",
+    description: "Acquire & reposition underperforming assets to create value & drive consistent returns through strategic renovations and operational improvements.",
     icon: "fa-building"
   },
   {
-    title: "Wealth Management",
-    description: "Customized financial roadmaps tailored to your long-term goals, family legacy, and risk tolerance.",
-    icon: "fa-chart-pie"
+    title: "Southeast Market Focus",
+    description: "Target markets with strong economic fundamentals in North Carolina, South Carolina, and Georgia—backed by data & local insight.",
+    icon: "fa-map-marker-alt"
   },
   {
-    title: "Consulting & Strategy",
-    description: "High-level advisory for business owners looking to scale, exit, or optimize their current capital allocation.",
-    icon: "fa-handshake"
-  },
-  {
-    title: "Portfolio Diversification",
-    description: "Mitigating risk through exposure to diverse asset classes including private equity and emerging markets.",
-    icon: "fa-layer-group"
-  },
-  {
-    title: "Asset Protection",
-    description: "Advanced legal and structural strategies to safeguard your holdings and ensure continuity across generations.",
+    title: "Risk-Adjusted Returns",
+    description: "Our strategy balances cash flow, equity growth, and downside protection for resilient performance across market cycles.",
     icon: "fa-shield-halved"
-  },
-  {
-    title: "Market Intelligence",
-    description: "Data-driven research and proprietary insights that keep you ahead of shifting global economic trends.",
-    icon: "fa-brain"
   }
 ];
 

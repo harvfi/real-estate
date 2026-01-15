@@ -9,9 +9,9 @@ const Footer: React.FC = () => {
   const handleNewsletterSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) return;
-    
+
     setNewsletterStatus('sending');
-    
+
     // Simulate API call
     setTimeout(() => {
       setNewsletterStatus('success');
@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
                 Receive exclusive market insights, investment opportunities, and wealth-building strategies directly to your inbox.
               </p>
             </div>
-            
+
             <div>
               {newsletterStatus === 'success' ? (
                 <div className="flex items-center space-x-3 bg-green-600/10 border border-green-600/30 rounded-lg p-4 animate-fadeIn">
@@ -90,21 +90,18 @@ const Footer: React.FC = () => {
               <span className="text-xl font-serif font-bold tracking-tighter">BLACKSTAR</span>
             </div>
             <p className="text-gray-500 max-w-sm mb-8">
-              Securing futures and building legacies through strategic investment and unwavering commitment to excellence.
+              Simply put – we identify undervalued assets, reposition them with strategy, and invite our partners to build wealth with us.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="w-10 h-10 border border-white/10 flex items-center justify-center rounded-full hover:bg-yellow-600 hover:text-black transition-all">
-                <i className="fab fa-linkedin-in"></i>
-              </a>
-              <a href="#" className="w-10 h-10 border border-white/10 flex items-center justify-center rounded-full hover:bg-yellow-600 hover:text-black transition-all">
+              <a href="https://www.instagram.com/theblackstargrp/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border border-white/10 flex items-center justify-center rounded-full hover:bg-yellow-600 hover:text-black transition-all">
                 <i className="fab fa-instagram"></i>
               </a>
-              <a href="#" className="w-10 h-10 border border-white/10 flex items-center justify-center rounded-full hover:bg-yellow-600 hover:text-black transition-all">
-                <i className="fab fa-twitter"></i>
+              <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border border-white/10 flex items-center justify-center rounded-full hover:bg-yellow-600 hover:text-black transition-all">
+                <i className="fab fa-linkedin-in"></i>
               </a>
             </div>
           </div>
-          
+
           <div>
             <h4 className="font-bold uppercase tracking-widest text-sm mb-6">Explore</h4>
             <ul className="space-y-4 text-gray-500 text-sm">
@@ -125,7 +122,7 @@ const Footer: React.FC = () => {
             </ul>
           </div>
         </div>
-        
+
         <div className="pt-10 border-t border-white/5 flex flex-col md:row justify-between items-center text-xs text-gray-600 tracking-widest uppercase">
           <p>© {new Date().getFullYear()} Blackstar Investments Group. All Rights Reserved.</p>
           <p className="mt-4 md:mt-0">Design & AI by Blackstar Digital</p>
