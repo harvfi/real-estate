@@ -105,127 +105,165 @@ const App: React.FC = () => {
           <Testimonials />
         </section>
 
-        <section id="contact" className="py-24 bg-gradient-to-b from-[#0a0a0a] to-black">
-          <div className="max-w-4xl mx-auto px-6">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-6xl font-serif mb-6 gradient-text">Book Your Consultation</h2>
-              <p className="text-xl text-gray-400">
-                Secure your position in our private advisory circle.
-              </p>
+        <section id="contact" className="py-24 bg-black relative">
+          {/* Blue Star Logo Background */}
+          <div className="absolute top-20 left-1/2 -translate-x-1/2">
+            <div className="w-32 h-32 relative">
+              <div className="absolute inset-0 bg-blue-900 opacity-80" style={{ clipPath: 'polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)' }}></div>
+              <div className="absolute inset-0 flex items-center justify-center">
+                <i className="fas fa-building text-blue-800 text-3xl"></i>
+              </div>
             </div>
+          </div>
 
-            <div className="grid md:grid-cols-2 gap-12">
-              <div className="glass-panel p-8 rounded-2xl border border-white/10 relative overflow-hidden">
-                {formStatus === 'success' ? (
-                  <div className="h-full flex flex-col items-center justify-center text-center space-y-6 py-6 animate-fadeIn">
-                    <div className="w-20 h-20 bg-yellow-600 text-black rounded-full flex items-center justify-center text-3xl shadow-lg star-glow">
-                      <i className="fas fa-check"></i>
-                    </div>
-                    <div>
-                      <h3 className="text-2xl font-serif mb-2">Booking Confirmed</h3>
-                      <div className="bg-white/10 px-4 py-2 rounded border border-white/10 inline-block mb-4">
-                        <span className="text-[10px] uppercase tracking-widest text-gray-500 block">Ref ID</span>
-                        <span className="font-mono text-yellow-500 font-bold">{bookingRef}</span>
-                      </div>
-                      <p className="text-gray-400 text-sm mb-6">A digital confirmation and calendar invitation have been dispatched to your inbox.</p>
-                    </div>
-                    <div className="text-left w-full space-y-4 border-t border-white/10 pt-6">
-                      <p className="text-xs font-bold uppercase tracking-widest text-yellow-600">What's Next?</p>
-                      <div className="flex space-x-3">
-                        <div className="w-6 h-6 rounded-full bg-white/5 flex items-center justify-center text-[10px] text-gray-400">1</div>
-                        <p className="text-sm text-gray-300 italic">Portfolio review within 24 hours.</p>
-                      </div>
-                      <div className="flex space-x-3">
-                        <div className="w-6 h-6 rounded-full bg-white/5 flex items-center justify-center text-[10px] text-gray-400">2</div>
-                        <p className="text-sm text-gray-300 italic">Private introductory discovery call.</p>
-                      </div>
-                    </div>
-                    <button onClick={() => setFormStatus('idle')} className="mt-8 text-gray-500 text-xs font-bold uppercase tracking-widest hover:text-yellow-600 transition-colors">Start new booking</button>
+          <div className="max-w-3xl mx-auto px-6 relative z-10">
+            {/* Form Container - Gray background like JotForm */}
+            <div className="bg-gray-400 rounded-2xl p-8 md:p-12 shadow-2xl">
+              {formStatus === 'success' ? (
+                <div className="text-center space-y-6 py-12">
+                  <div className="w-20 h-20 bg-yellow-600 text-black rounded-full flex items-center justify-center text-3xl shadow-lg mx-auto">
+                    <i className="fas fa-check"></i>
                   </div>
-                ) : (
-                  <form onSubmit={handleContactSubmit} className="space-y-6">
-                    <div className="grid grid-cols-2 gap-4">
-                      <div className="space-y-1">
-                        <label className="text-[10px] uppercase tracking-widest text-gray-500 ml-1">First Name</label>
-                        <input required type="text" placeholder="John" className="w-full bg-white/5 border border-white/10 rounded-lg p-3 focus:outline-none focus:border-yellow-600" />
-                      </div>
-                      <div className="space-y-1">
-                        <label className="text-[10px] uppercase tracking-widest text-gray-500 ml-1">Last Name</label>
-                        <input required type="text" placeholder="Doe" className="w-full bg-white/5 border border-white/10 rounded-lg p-3 focus:outline-none focus:border-yellow-600" />
-                      </div>
+                  <div>
+                    <h3 className="text-3xl font-serif mb-2 text-gray-900">Welcome to the Network!</h3>
+                    <div className="bg-white/50 px-4 py-2 rounded border border-gray-300 inline-block mb-4">
+                      <span className="text-[10px] uppercase tracking-widest text-gray-600 block">Confirmation ID</span>
+                      <span className="font-mono text-blue-900 font-bold">{bookingRef}</span>
                     </div>
-                    <div className="space-y-1">
-                      <label className="text-[10px] uppercase tracking-widest text-gray-500 ml-1">Email Address</label>
-                      <input required type="email" placeholder="john@example.com" className="w-full bg-white/5 border border-white/10 rounded-lg p-3 focus:outline-none focus:border-yellow-600" />
-                    </div>
-                    <div className="space-y-1">
-                      <label className="text-[10px] uppercase tracking-widest text-gray-500 ml-1">Consultation Interest</label>
-                      <select className="w-full bg-white/5 border border-white/10 rounded-lg p-3 focus:outline-none focus:border-yellow-600 appearance-none">
-                        <option className="bg-black">Multifamily Investment Opportunities</option>
-                        <option className="bg-black">Value-Add Strategy</option>
-                        <option className="bg-black">Become a Referral Partner</option>
-                      </select>
-                    </div>
-                    <div className="space-y-1">
-                      <label className="text-[10px] uppercase tracking-widest text-gray-500 ml-1">Notes (Optional)</label>
-                      <textarea rows={3} placeholder="Tell us about your investment goals..." className="w-full bg-white/5 border border-white/10 rounded-lg p-3 focus:outline-none focus:border-yellow-600"></textarea>
-                    </div>
-                    <button
-                      disabled={formStatus === 'sending'}
-                      type="submit"
-                      className="w-full py-4 bg-yellow-600 text-black font-bold rounded-lg hover:bg-yellow-500 transition-all uppercase tracking-widest flex items-center justify-center shadow-lg"
-                    >
-                      {formStatus === 'sending' ? <i className="fas fa-circle-notch animate-spin mr-2"></i> : null}
-                      {formStatus === 'sending' ? 'Securing Spot...' : 'Book Discovery Session'}
-                    </button>
-                  </form>
-                )}
-              </div>
-
-              <div className="flex flex-col justify-between">
-                <div className="space-y-8">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-yellow-600/10 flex items-center justify-center rounded-lg text-yellow-600">
-                      <i className="fas fa-calendar-check text-xl"></i>
-                    </div>
-                    <div>
-                      <h4 className="text-xl font-bold mb-1">Direct Scheduling</h4>
-                      <p className="text-gray-400 mb-4">View our partners' availability and book a slot instantly.</p>
-                      <a
-                        href={linktreeUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-yellow-600 font-bold hover:underline"
-                      >
-                        Visit Linktree <i className="fas fa-arrow-right ml-1"></i>
-                      </a>
-                    </div>
+                    <p className="text-gray-700 text-sm mb-6">Check your inbox for exclusive investment opportunities and our newsletter, Multifamily Made Simple.</p>
                   </div>
-
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-yellow-600/10 flex items-center justify-center rounded-lg text-yellow-600">
-                      <i className="fas fa-file-pdf text-xl"></i>
-                    </div>
-                    <div>
-                      <h4 className="text-xl font-bold mb-1">Digital Prospectus</h4>
-                      <p className="text-gray-400 mb-4">A complete breakdown of our current investment portfolios.</p>
-                      <button
-                        onClick={handleDownload}
-                        className="px-6 py-2 bg-white/5 border border-white/20 hover:bg-white/10 rounded-lg transition-all text-sm font-bold flex items-center"
-                      >
-                        {downloadStatus === 'loading' ? <i className="fas fa-circle-notch animate-spin mr-2"></i> : <i className="fas fa-download mr-2"></i>}
-                        {downloadStatus === 'loading' ? 'Preparing...' : downloadStatus === 'success' ? 'Ready for Save' : 'Download Brochure'}
-                      </button>
-                    </div>
-                  </div>
+                  <button onClick={() => setFormStatus('idle')} className="text-blue-900 text-sm font-bold uppercase tracking-widest hover:text-yellow-600 transition-colors">Submit Another Response</button>
                 </div>
+              ) : (
+                <form onSubmit={handleContactSubmit} className="space-y-6">
+                  {/* Header */}
+                  <div className="mb-8">
+                    <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-3 flex items-center">
+                      <span className="text-yellow-600 mr-2">★</span>
+                      Blackstar Investor Network
+                    </h2>
+                    <p className="text-blue-800 text-sm leading-relaxed">
+                      Get access to our newsletter, Multifamily Made Simple, along with exclusive investment opportunities and insights into opportunistic multifamily deals.
+                    </p>
+                  </div>
 
-                <div className="mt-8 p-6 bg-yellow-600/5 border border-yellow-600/10 rounded-2xl">
-                  <p className="text-gray-400 text-sm italic">
-                    "Legacy is not what we leave behind, but what we build for those who follow. Let's start building yours today."
-                  </p>
-                </div>
-              </div>
+                  {/* Full Name */}
+                  <div className="space-y-2">
+                    <label className="text-sm font-semibold text-blue-900">
+                      Full Name <span className="text-yellow-600">*</span>
+                    </label>
+                    <div className="grid grid-cols-2 gap-3">
+                      <div>
+                        <input required type="text" placeholder="First Name" className="w-full bg-white border border-gray-400 rounded p-3 text-gray-900 placeholder-gray-500 focus:outline-none focus:border-blue-900" />
+                      </div>
+                      <div>
+                        <input required type="text" placeholder="Last Name" className="w-full bg-white border border-gray-400 rounded p-3 text-gray-900 placeholder-gray-500 focus:outline-none focus:border-blue-900" />
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Email */}
+                  <div className="space-y-2">
+                    <label className="text-sm font-semibold text-blue-900">
+                      Email Address <span className="text-yellow-600">*</span>
+                    </label>
+                    <input required type="email" placeholder="example@example.com" className="w-full bg-white border border-gray-400 rounded p-3 text-gray-900 placeholder-gray-500 focus:outline-none focus:border-blue-900" />
+                  </div>
+
+                  {/* Accredited Investor */}
+                  <div className="space-y-3">
+                    <label className="text-sm font-semibold text-blue-900">
+                      Are you an accredited investor? <span className="text-yellow-600">*</span>
+                    </label>
+                    <div className="space-y-2">
+                      {['Yes', 'No', 'Not Sure'].map((option) => (
+                        <label key={option} className="flex items-center space-x-3 cursor-pointer">
+                          <input type="radio" name="accredited" value={option} required className="w-5 h-5 text-blue-900" />
+                          <span className="text-gray-900">{option}</span>
+                        </label>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Real Estate Journey */}
+                  <div className="space-y-3">
+                    <label className="text-sm font-semibold text-blue-900">
+                      Where are you in your real estate journey? <span className="text-yellow-600">*</span>
+                    </label>
+                    <div className="space-y-2">
+                      {[
+                        'Just exploring the idea',
+                        'Learning & looking for my first deal',
+                        'Actively investing & growing my portfolio',
+                        'Experienced investor ready for bigger opportunities'
+                      ].map((option) => (
+                        <label key={option} className="flex items-center space-x-3 cursor-pointer">
+                          <input type="radio" name="journey" value={option} required className="w-5 h-5 text-blue-900" />
+                          <span className="text-gray-900">{option}</span>
+                        </label>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Investment Type */}
+                  <div className="space-y-3">
+                    <label className="text-sm font-semibold text-blue-900">
+                      What type of opportunities interest you most? <span className="text-yellow-600">*</span>
+                    </label>
+                    <div className="space-y-2">
+                      {[
+                        'Passive Investing (LP)',
+                        'Active Partnerships (GP/Co-GP)',
+                        'Learning & networking',
+                        'Other'
+                      ].map((option) => (
+                        <label key={option} className="flex items-center space-x-3 cursor-pointer">
+                          <input type="radio" name="opportunity" value={option} required className="w-5 h-5 text-blue-900" />
+                          <span className="text-gray-900">{option}</span>
+                        </label>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Investment Timeline */}
+                  <div className="space-y-3">
+                    <label className="text-sm font-semibold text-blue-900">
+                      When are you looking to invest? <span className="text-yellow-600">*</span>
+                    </label>
+                    <div className="space-y-2">
+                      {[
+                        'Within 3 months',
+                        '3-6 months',
+                        '6-12 months',
+                        'Not sure'
+                      ].map((option) => (
+                        <label key={option} className="flex items-center space-x-3 cursor-pointer">
+                          <input type="radio" name="timeline" value={option} required className="w-5 h-5 text-blue-900" />
+                          <span className="text-gray-900">{option}</span>
+                        </label>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* How did you hear */}
+                  <div className="space-y-2">
+                    <label className="text-sm font-semibold text-blue-900">
+                      How did you hear about us?
+                    </label>
+                    <input type="text" placeholder="Optional" className="w-full bg-white border border-gray-400 rounded p-3 text-gray-900 placeholder-gray-500 focus:outline-none focus:border-blue-900" />
+                  </div>
+
+                  {/* Submit Button */}
+                  <button
+                    disabled={formStatus === 'sending'}
+                    type="submit"
+                    className="w-full py-4 bg-green-600 text-white font-bold rounded-lg hover:bg-green-700 transition-all uppercase tracking-widest flex items-center justify-center shadow-lg disabled:opacity-50"
+                  >
+                    {formStatus === 'sending' ? <i className="fas fa-circle-notch animate-spin mr-2"></i> : null}
+                    {formStatus === 'sending' ? 'Submitting...' : 'Submit'}
+                  </button>
+                </form>
+              )}
             </div>
           </div>
         </section>
