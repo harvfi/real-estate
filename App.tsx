@@ -107,7 +107,7 @@ const App: React.FC = () => {
         <section id="who-its-for" className="py-24 bg-[#0a0a0a]">
           <div className="max-w-7xl mx-auto px-6 md:px-12">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-serif mb-4">Our Impact</h2>
+              <h2 className="text-4xl md:text-5xl font-serif mb-4">Who We Help</h2>
               <div className="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
             </div>
             <div className="grid md:grid-cols-3 gap-8">
