@@ -69,7 +69,7 @@ const App: React.FC = () => {
         {/* What We Do */}
         <section id="services" className="py-24 px-6 md:px-12 max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-serif mb-4">Our Purpose</h2>
+            <h2 className="text-4xl md:text-5xl font-serif mb-4">Our Investment Solutions</h2>
             <div className="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
