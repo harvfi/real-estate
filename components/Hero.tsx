@@ -20,9 +20,6 @@ const Hero: React.FC<HeroProps> = ({ linktreeUrl }) => {
 
       <div className="relative z-20 max-w-7xl mx-auto px-6 md:px-12 w-full">
         <div className="max-w-3xl">
-          <div className="inline-block px-4 py-1 border border-blue-600/50 text-blue-500 text-xs font-bold tracking-[0.3em] uppercase mb-8 rounded-full">
-            Deal Analysis & Underwriting
-          </div>
           <h1 className="text-5xl md:text-8xl font-serif leading-tight mb-8">
             Clarity in <span className="gradient-text italic">Multifamily</span> Investing
           </h1>
