@@ -56,7 +56,7 @@ const App: React.FC = () => {
               </div>
               <div className="text-center">
                 <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">5+</div>
-                <div className="text-sm text-gray-400 uppercase tracking-widest">Markets Covered</div>
+                <div className="text-sm text-gray-400 uppercase tracking-widest">Markets Analyzed</div>
               </div>
               <div className="text-center">
                 <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">$50M+</div>
