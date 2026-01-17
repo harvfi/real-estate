@@ -90,7 +90,7 @@ const Footer: React.FC = () => {
               <span className="text-xl font-serif font-bold tracking-tighter">THE BLACKSTAR GROUP</span>
             </div>
             <p className="text-gray-500 max-w-sm mb-8">
-              Simply put – we identify undervalued assets, reposition them with strategy, and invite our partners to build wealth with us.
+              We identify undervalued assets, reposition them with strategy, and invite our partners to build wealth with us.
             </p>
             <div className="flex space-x-4">
               <a href="https://www.instagram.com/theblackstargrp/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border border-white/10 flex items-center justify-center rounded-full hover:bg-blue-600 hover:text-black transition-all">
