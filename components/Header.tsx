@@ -16,11 +16,8 @@ const Header: React.FC = () => {
   return (
     <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-black/90 backdrop-blur-md py-4 shadow-lg border-b border-white/5' : 'bg-transparent py-6'}`}>
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
-        <a href="#home" className="flex items-center space-x-2">
-          <div className="w-10 h-10 bg-blue-600 flex items-center justify-center rounded-sm">
-            <span className="text-black font-black text-xl">B</span>
-          </div>
-          <span className="text-2xl font-serif font-bold tracking-tighter">THE BLACKSTAR GROUP</span>
+        <a href="#home" className="flex items-center space-x-3">
+          <img src="/images/logo-full.jpg" alt="The Blackstar Group" className="h-12" />
         </a>
 
         <nav className="hidden md:flex space-x-10 text-sm font-medium uppercase tracking-widest">
