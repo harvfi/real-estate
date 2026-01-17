@@ -177,7 +177,7 @@ const App: React.FC = () => {
                   <div className="mb-8">
                     <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-3 flex items-center">
                       <span className="text-blue-600 mr-2">★</span>
-                      Blackstar Investor Network
+                      The Blackstar Group Investor Network
                     </h2>
                     <p className="text-blue-800 text-sm leading-relaxed">
                       Get access to our newsletter, Multifamily Made Simple, along with exclusive investment opportunities and insights into opportunistic multifamily deals.

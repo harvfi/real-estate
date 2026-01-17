@@ -87,7 +87,7 @@ const Footer: React.FC = () => {
               <div className="w-8 h-8 bg-blue-600 flex items-center justify-center rounded-sm">
                 <span className="text-black font-black text-lg">B</span>
               </div>
-              <span className="text-xl font-serif font-bold tracking-tighter">BLACKSTAR</span>
+              <span className="text-xl font-serif font-bold tracking-tighter">THE BLACKSTAR GROUP</span>
             </div>
             <p className="text-gray-500 max-w-sm mb-8">
               Simply put – we identify undervalued assets, reposition them with strategy, and invite our partners to build wealth with us.
@@ -124,7 +124,7 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="pt-10 border-t border-white/5 flex flex-col md:row justify-between items-center text-xs text-gray-600 tracking-widest uppercase">
-          <p>© {new Date().getFullYear()} Blackstar Investments Group. All Rights Reserved.</p>
+          <p>© {new Date().getFullYear()} The Blackstar Group Group. All Rights Reserved.</p>
           <p className="mt-4 md:mt-0">Design & AI by Blackstar Digital</p>
         </div>
       </div>

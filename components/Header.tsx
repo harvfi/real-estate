@@ -20,7 +20,7 @@ const Header: React.FC = () => {
           <div className="w-10 h-10 bg-blue-600 flex items-center justify-center rounded-sm">
             <span className="text-black font-black text-xl">B</span>
           </div>
-          <span className="text-2xl font-serif font-bold tracking-tighter">BLACKSTAR</span>
+          <span className="text-2xl font-serif font-bold tracking-tighter">THE BLACKSTAR GROUP</span>
         </a>
 
         <nav className="hidden md:flex space-x-10 text-sm font-medium uppercase tracking-widest">
