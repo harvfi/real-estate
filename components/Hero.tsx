@@ -27,7 +27,7 @@ const Hero: React.FC<HeroProps> = ({ linktreeUrl }) => {
             Clarity in <span className="gradient-text italic">Multifamily</span> Investing
           </h1>
           <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-xl leading-relaxed">
-            We break down multifamily deals and Southeast markets so investors, brokers, and operators understand how deals actually work – the returns, the risks, and the downside — before committing capital.
+            We focus on multifamily opportunities where risk is understood, assumptions are tested, and returns are built to hold up over time.
           </p>
           <div className="flex flex-col sm:flex-row gap-5">
             <a
