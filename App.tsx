@@ -75,29 +75,29 @@ const App: React.FC = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="glass-panel p-8 rounded-2xl hover:bg-white/5 transition-all duration-500 group border border-white/5 hover:border-blue-600/30">
               <div className="w-16 h-16 bg-blue-600/10 flex items-center justify-center rounded-xl mb-6 group-hover:bg-blue-600 transition-colors">
-                <i className="fas fa-chart-line text-2xl text-blue-600 group-hover:text-black transition-colors"></i>
+                <i className="fas fa-users text-2xl text-blue-600 group-hover:text-black transition-colors"></i>
               </div>
-              <h3 className="text-2xl font-serif mb-4">Underwrite Opportunities</h3>
+              <h3 className="text-2xl font-serif mb-4">Invest Alongside Us</h3>
               <p className="text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors">
-                Underwrite value-add multifamily opportunities for investors and operators
+                Provide opportunities for new and sophisticated investors to participate alongside us in select multifamily investments.
               </p>
             </div>
             <div className="glass-panel p-8 rounded-2xl hover:bg-white/5 transition-all duration-500 group border border-white/5 hover:border-blue-600/30">
               <div className="w-16 h-16 bg-blue-600/10 flex items-center justify-center rounded-xl mb-6 group-hover:bg-blue-600 transition-colors">
-                <i className="fas fa-handshake text-2xl text-blue-600 group-hover:text-black transition-colors"></i>
+                <i className="fas fa-lightbulb text-2xl text-blue-600 group-hover:text-black transition-colors"></i>
               </div>
-              <h3 className="text-2xl font-serif mb-4">Support Brokers</h3>
+              <h3 className="text-2xl font-serif mb-4">Strategic Advisory</h3>
               <p className="text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors">
-                Support real estate agents and brokers by analyzing commercial deals and return scenarios
+                Advise agents, brokers, and investors on commercial deals by clarifying structure, returns, and risk.
               </p>
             </div>
             <div className="glass-panel p-8 rounded-2xl hover:bg-white/5 transition-all duration-500 group border border-white/5 hover:border-blue-600/30">
               <div className="w-16 h-16 bg-blue-600/10 flex items-center justify-center rounded-xl mb-6 group-hover:bg-blue-600 transition-colors">
-                <i className="fas fa-calculator text-2xl text-blue-600 group-hover:text-black transition-colors"></i>
+                <i className="fas fa-chart-bar text-2xl text-blue-600 group-hover:text-black transition-colors"></i>
               </div>
-              <h3 className="text-2xl font-serif mb-4">Break Down Deals</h3>
+              <h3 className="text-2xl font-serif mb-4">Deal Analysis</h3>
               <p className="text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors">
-                Break down pricing, cash flow, and downside so deals can be evaluated with confidence
+                Walk through pricing, cash flow, and downside scenarios so you understand how a deal really works before making a decision.
               </p>
             </div>
           </div>
