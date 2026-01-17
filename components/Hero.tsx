@@ -20,7 +20,7 @@ const Hero: React.FC<HeroProps> = ({ linktreeUrl }) => {
 
       <div className="relative z-20 max-w-7xl mx-auto px-6 md:px-12 w-full">
         <div className="max-w-3xl">
-          <div className="inline-block px-4 py-1 border border-yellow-600/50 text-yellow-500 text-xs font-bold tracking-[0.3em] uppercase mb-8 rounded-full">
+          <div className="inline-block px-4 py-1 border border-blue-600/50 text-blue-500 text-xs font-bold tracking-[0.3em] uppercase mb-8 rounded-full">
             Deal Analysis & Underwriting
           </div>
           <h1 className="text-5xl md:text-8xl font-serif leading-tight mb-8">
@@ -34,7 +34,7 @@ const Hero: React.FC<HeroProps> = ({ linktreeUrl }) => {
               href="https://forms.gle/ahYv3GhDamQDjZCo9"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-10 py-5 bg-yellow-600 text-black font-extrabold rounded hover:bg-yellow-500 transition-all text-center uppercase tracking-widest"
+              className="px-10 py-5 bg-blue-600 text-black font-extrabold rounded hover:bg-blue-500 transition-all text-center uppercase tracking-widest"
             >
               See How Deals Really Work
             </a>
@@ -53,7 +53,7 @@ const Hero: React.FC<HeroProps> = ({ linktreeUrl }) => {
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 hidden md:block animate-bounce">
-        <div className="w-[1px] h-12 bg-gradient-to-b from-yellow-600 to-transparent"></div>
+        <div className="w-[1px] h-12 bg-gradient-to-b from-blue-600 to-transparent"></div>
       </div>
     </div>
   );

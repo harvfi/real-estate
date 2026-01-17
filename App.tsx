@@ -34,7 +34,7 @@ const App: React.FC = () => {
   const linktreeUrl = "https://linktr.ee/blackstarinvestments";
 
   return (
-    <div className="min-h-screen bg-[#050505] text-white selection:bg-yellow-500/30">
+    <div className="min-h-screen bg-[#050505] text-white selection:bg-blue-500/30">
       <Header />
       <main>
         <section id="home">
@@ -47,19 +47,19 @@ const App: React.FC = () => {
           <div className="max-w-7xl mx-auto px-6 md:px-12">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-yellow-600 mb-2">14–20%</div>
+                <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">14–20%</div>
                 <div className="text-sm text-gray-400 uppercase tracking-widest">Target IRR</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-yellow-600 mb-2">95+</div>
+                <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">95+</div>
                 <div className="text-sm text-gray-400 uppercase tracking-widest">Active Investors</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-yellow-600 mb-2">5+</div>
+                <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">5+</div>
                 <div className="text-sm text-gray-400 uppercase tracking-widest">Markets Covered</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-yellow-600 mb-2">$50M+</div>
+                <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">$50M+</div>
                 <div className="text-sm text-gray-400 uppercase tracking-widest">Deals Underwritten</div>
               </div>
             </div>
@@ -70,30 +70,30 @@ const App: React.FC = () => {
         <section id="services" className="py-24 px-6 md:px-12 max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-serif mb-4">Our Purpose</h2>
-            <div className="w-24 h-1 bg-yellow-600 mx-auto mb-6"></div>
+            <div className="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="glass-panel p-8 rounded-2xl hover:bg-white/5 transition-all duration-500 group border border-white/5 hover:border-yellow-600/30">
-              <div className="w-16 h-16 bg-yellow-600/10 flex items-center justify-center rounded-xl mb-6 group-hover:bg-yellow-600 transition-colors">
-                <i className="fas fa-chart-line text-2xl text-yellow-600 group-hover:text-black transition-colors"></i>
+            <div className="glass-panel p-8 rounded-2xl hover:bg-white/5 transition-all duration-500 group border border-white/5 hover:border-blue-600/30">
+              <div className="w-16 h-16 bg-blue-600/10 flex items-center justify-center rounded-xl mb-6 group-hover:bg-blue-600 transition-colors">
+                <i className="fas fa-chart-line text-2xl text-blue-600 group-hover:text-black transition-colors"></i>
               </div>
               <h3 className="text-2xl font-serif mb-4">Underwrite Opportunities</h3>
               <p className="text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors">
                 Underwrite value-add multifamily opportunities for investors and operators
               </p>
             </div>
-            <div className="glass-panel p-8 rounded-2xl hover:bg-white/5 transition-all duration-500 group border border-white/5 hover:border-yellow-600/30">
-              <div className="w-16 h-16 bg-yellow-600/10 flex items-center justify-center rounded-xl mb-6 group-hover:bg-yellow-600 transition-colors">
-                <i className="fas fa-handshake text-2xl text-yellow-600 group-hover:text-black transition-colors"></i>
+            <div className="glass-panel p-8 rounded-2xl hover:bg-white/5 transition-all duration-500 group border border-white/5 hover:border-blue-600/30">
+              <div className="w-16 h-16 bg-blue-600/10 flex items-center justify-center rounded-xl mb-6 group-hover:bg-blue-600 transition-colors">
+                <i className="fas fa-handshake text-2xl text-blue-600 group-hover:text-black transition-colors"></i>
               </div>
               <h3 className="text-2xl font-serif mb-4">Support Brokers</h3>
               <p className="text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors">
                 Support real estate agents and brokers by analyzing commercial deals and return scenarios
               </p>
             </div>
-            <div className="glass-panel p-8 rounded-2xl hover:bg-white/5 transition-all duration-500 group border border-white/5 hover:border-yellow-600/30">
-              <div className="w-16 h-16 bg-yellow-600/10 flex items-center justify-center rounded-xl mb-6 group-hover:bg-yellow-600 transition-colors">
-                <i className="fas fa-calculator text-2xl text-yellow-600 group-hover:text-black transition-colors"></i>
+            <div className="glass-panel p-8 rounded-2xl hover:bg-white/5 transition-all duration-500 group border border-white/5 hover:border-blue-600/30">
+              <div className="w-16 h-16 bg-blue-600/10 flex items-center justify-center rounded-xl mb-6 group-hover:bg-blue-600 transition-colors">
+                <i className="fas fa-calculator text-2xl text-blue-600 group-hover:text-black transition-colors"></i>
               </div>
               <h3 className="text-2xl font-serif mb-4">Break Down Deals</h3>
               <p className="text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors">
@@ -108,12 +108,12 @@ const App: React.FC = () => {
           <div className="max-w-7xl mx-auto px-6 md:px-12">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-serif mb-4">Our Impact</h2>
-              <div className="w-24 h-1 bg-yellow-600 mx-auto mb-6"></div>
+              <div className="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
             </div>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center p-8">
-                <div className="w-20 h-20 bg-yellow-600/10 flex items-center justify-center rounded-full mx-auto mb-6">
-                  <i className="fas fa-user-tie text-3xl text-yellow-600"></i>
+                <div className="w-20 h-20 bg-blue-600/10 flex items-center justify-center rounded-full mx-auto mb-6">
+                  <i className="fas fa-user-tie text-3xl text-blue-600"></i>
                 </div>
                 <h3 className="text-2xl font-serif mb-4">Investors</h3>
                 <p className="text-gray-400 leading-relaxed">
@@ -121,8 +121,8 @@ const App: React.FC = () => {
                 </p>
               </div>
               <div className="text-center p-8">
-                <div className="w-20 h-20 bg-yellow-600/10 flex items-center justify-center rounded-full mx-auto mb-6">
-                  <i className="fas fa-briefcase text-3xl text-yellow-600"></i>
+                <div className="w-20 h-20 bg-blue-600/10 flex items-center justify-center rounded-full mx-auto mb-6">
+                  <i className="fas fa-briefcase text-3xl text-blue-600"></i>
                 </div>
                 <h3 className="text-2xl font-serif mb-4">Brokers & Agents</h3>
                 <p className="text-gray-400 leading-relaxed">
@@ -130,8 +130,8 @@ const App: React.FC = () => {
                 </p>
               </div>
               <div className="text-center p-8">
-                <div className="w-20 h-20 bg-yellow-600/10 flex items-center justify-center rounded-full mx-auto mb-6">
-                  <i className="fas fa-building text-3xl text-yellow-600"></i>
+                <div className="w-20 h-20 bg-blue-600/10 flex items-center justify-center rounded-full mx-auto mb-6">
+                  <i className="fas fa-building text-3xl text-blue-600"></i>
                 </div>
                 <h3 className="text-2xl font-serif mb-4">Operators</h3>
                 <p className="text-gray-400 leading-relaxed">
@@ -158,7 +158,7 @@ const App: React.FC = () => {
             <div className="bg-gray-400 rounded-2xl p-8 md:p-12 shadow-2xl">
               {formStatus === 'success' ? (
                 <div className="text-center space-y-6 py-12">
-                  <div className="w-20 h-20 bg-yellow-600 text-black rounded-full flex items-center justify-center text-3xl shadow-lg mx-auto">
+                  <div className="w-20 h-20 bg-blue-600 text-black rounded-full flex items-center justify-center text-3xl shadow-lg mx-auto">
                     <i className="fas fa-check"></i>
                   </div>
                   <div>
@@ -169,14 +169,14 @@ const App: React.FC = () => {
                     </div>
                     <p className="text-gray-700 text-sm mb-6">Check your inbox for exclusive investment opportunities and our newsletter, Multifamily Made Simple.</p>
                   </div>
-                  <button onClick={() => setFormStatus('idle')} className="text-blue-900 text-sm font-bold uppercase tracking-widest hover:text-yellow-600 transition-colors">Submit Another Response</button>
+                  <button onClick={() => setFormStatus('idle')} className="text-blue-900 text-sm font-bold uppercase tracking-widest hover:text-blue-600 transition-colors">Submit Another Response</button>
                 </div>
               ) : (
                 <form onSubmit={handleContactSubmit} className="space-y-6">
                   {/* Header */}
                   <div className="mb-8">
                     <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-3 flex items-center">
-                      <span className="text-yellow-600 mr-2">★</span>
+                      <span className="text-blue-600 mr-2">★</span>
                       Blackstar Investor Network
                     </h2>
                     <p className="text-blue-800 text-sm leading-relaxed">
@@ -187,7 +187,7 @@ const App: React.FC = () => {
                   {/* Full Name */}
                   <div className="space-y-2">
                     <label className="text-sm font-semibold text-blue-900">
-                      Full Name <span className="text-yellow-600">*</span>
+                      Full Name <span className="text-blue-600">*</span>
                     </label>
                     <div className="grid grid-cols-2 gap-3">
                       <div>
@@ -202,7 +202,7 @@ const App: React.FC = () => {
                   {/* Email */}
                   <div className="space-y-2">
                     <label className="text-sm font-semibold text-blue-900">
-                      Email Address <span className="text-yellow-600">*</span>
+                      Email Address <span className="text-blue-600">*</span>
                     </label>
                     <input required type="email" placeholder="example@example.com" className="w-full bg-white border border-gray-400 rounded p-3 text-gray-900 placeholder-gray-500 focus:outline-none focus:border-blue-900" />
                   </div>
@@ -210,7 +210,7 @@ const App: React.FC = () => {
                   {/* Accredited Investor */}
                   <div className="space-y-3">
                     <label className="text-sm font-semibold text-blue-900">
-                      Are you an accredited investor? <span className="text-yellow-600">*</span>
+                      Are you an accredited investor? <span className="text-blue-600">*</span>
                     </label>
                     <div className="space-y-2">
                       {['Yes', 'No', 'Not Sure'].map((option) => (
@@ -225,7 +225,7 @@ const App: React.FC = () => {
                   {/* Real Estate Journey */}
                   <div className="space-y-3">
                     <label className="text-sm font-semibold text-blue-900">
-                      Where are you in your real estate journey? <span className="text-yellow-600">*</span>
+                      Where are you in your real estate journey? <span className="text-blue-600">*</span>
                     </label>
                     <div className="space-y-2">
                       {[
@@ -245,7 +245,7 @@ const App: React.FC = () => {
                   {/* Investment Type */}
                   <div className="space-y-3">
                     <label className="text-sm font-semibold text-blue-900">
-                      What type of opportunities interest you most? <span className="text-yellow-600">*</span>
+                      What type of opportunities interest you most? <span className="text-blue-600">*</span>
                     </label>
                     <div className="space-y-2">
                       {[
@@ -265,7 +265,7 @@ const App: React.FC = () => {
                   {/* Investment Timeline */}
                   <div className="space-y-3">
                     <label className="text-sm font-semibold text-blue-900">
-                      When are you looking to invest? <span className="text-yellow-600">*</span>
+                      When are you looking to invest? <span className="text-blue-600">*</span>
                     </label>
                     <div className="space-y-2">
                       {[

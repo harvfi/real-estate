@@ -24,12 +24,12 @@ const Footer: React.FC = () => {
     <footer className="bg-black py-20 border-t border-white/5">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Newsletter Section */}
-        <div className="mb-16 glass-panel p-8 md:p-12 rounded-2xl border border-yellow-600/20 bg-gradient-to-br from-yellow-600/5 to-transparent">
+        <div className="mb-16 glass-panel p-8 md:p-12 rounded-2xl border border-blue-600/20 bg-gradient-to-br from-blue-600/5 to-transparent">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <i className="fas fa-envelope text-yellow-600 text-xl"></i>
-                <span className="text-xs uppercase tracking-widest text-yellow-600 font-bold">Stay Informed</span>
+                <i className="fas fa-envelope text-blue-600 text-xl"></i>
+                <span className="text-xs uppercase tracking-widest text-blue-600 font-bold">Stay Informed</span>
               </div>
               <h3 className="text-3xl md:text-4xl font-serif mb-3">Join Our Newsletter</h3>
               <p className="text-gray-400">
@@ -56,12 +56,12 @@ const Footer: React.FC = () => {
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="your.email@example.com"
                     required
-                    className="flex-1 bg-white/5 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-yellow-600 transition-colors"
+                    className="flex-1 bg-white/5 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-600 transition-colors"
                   />
                   <button
                     type="submit"
                     disabled={newsletterStatus === 'sending'}
-                    className="px-6 py-3 bg-yellow-600 text-black font-bold rounded-lg hover:bg-yellow-500 transition-all uppercase tracking-widest text-sm flex items-center justify-center space-x-2 disabled:opacity-50"
+                    className="px-6 py-3 bg-blue-600 text-black font-bold rounded-lg hover:bg-blue-500 transition-all uppercase tracking-widest text-sm flex items-center justify-center space-x-2 disabled:opacity-50"
                   >
                     {newsletterStatus === 'sending' ? (
                       <>
@@ -84,7 +84,7 @@ const Footer: React.FC = () => {
         <div className="grid md:grid-cols-4 gap-12 mb-16">
           <div className="col-span-2">
             <div className="flex items-center space-x-2 mb-6">
-              <div className="w-8 h-8 bg-yellow-600 flex items-center justify-center rounded-sm">
+              <div className="w-8 h-8 bg-blue-600 flex items-center justify-center rounded-sm">
                 <span className="text-black font-black text-lg">B</span>
               </div>
               <span className="text-xl font-serif font-bold tracking-tighter">BLACKSTAR</span>
@@ -93,10 +93,10 @@ const Footer: React.FC = () => {
               Simply put – we identify undervalued assets, reposition them with strategy, and invite our partners to build wealth with us.
             </p>
             <div className="flex space-x-4">
-              <a href="https://www.instagram.com/theblackstargrp/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border border-white/10 flex items-center justify-center rounded-full hover:bg-yellow-600 hover:text-black transition-all">
+              <a href="https://www.instagram.com/theblackstargrp/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border border-white/10 flex items-center justify-center rounded-full hover:bg-blue-600 hover:text-black transition-all">
                 <i className="fab fa-instagram"></i>
               </a>
-              <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border border-white/10 flex items-center justify-center rounded-full hover:bg-yellow-600 hover:text-black transition-all">
+              <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border border-white/10 flex items-center justify-center rounded-full hover:bg-blue-600 hover:text-black transition-all">
                 <i className="fab fa-linkedin-in"></i>
               </a>
             </div>
@@ -105,20 +105,20 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="font-bold uppercase tracking-widest text-sm mb-6">Explore</h4>
             <ul className="space-y-4 text-gray-500 text-sm">
-              <li><a href="#home" className="hover:text-yellow-600 transition-colors">Home</a></li>
-              <li><a href="#services" className="hover:text-yellow-600 transition-colors">Services</a></li>
-              <li><a href="#about" className="hover:text-yellow-600 transition-colors">About</a></li>
-              <li><a href="#contact" className="hover:text-yellow-600 transition-colors">Book Consultation</a></li>
+              <li><a href="#home" className="hover:text-blue-600 transition-colors">Home</a></li>
+              <li><a href="#services" className="hover:text-blue-600 transition-colors">Services</a></li>
+              <li><a href="#about" className="hover:text-blue-600 transition-colors">About</a></li>
+              <li><a href="#contact" className="hover:text-blue-600 transition-colors">Book Consultation</a></li>
             </ul>
           </div>
 
           <div>
             <h4 className="font-bold uppercase tracking-widest text-sm mb-6">Legal</h4>
             <ul className="space-y-4 text-gray-500 text-sm">
-              <li><a href="#" className="hover:text-yellow-600 transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-yellow-600 transition-colors">Terms of Service</a></li>
-              <li><a href="#" className="hover:text-yellow-600 transition-colors">Cookie Policy</a></li>
-              <li><a href="#" className="hover:text-yellow-600 transition-colors">Disclaimer</a></li>
+              <li><a href="#" className="hover:text-blue-600 transition-colors">Privacy Policy</a></li>
+              <li><a href="#" className="hover:text-blue-600 transition-colors">Terms of Service</a></li>
+              <li><a href="#" className="hover:text-blue-600 transition-colors">Cookie Policy</a></li>
+              <li><a href="#" className="hover:text-blue-600 transition-colors">Disclaimer</a></li>
             </ul>
           </div>
         </div>
