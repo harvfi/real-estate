@@ -44,7 +44,7 @@ const Hero: React.FC<HeroProps> = ({ linktreeUrl }) => {
               rel="noopener noreferrer"
               className="px-10 py-5 glass-panel text-white font-bold rounded hover:bg-white/10 transition-all text-center uppercase tracking-widest border border-white/20"
             >
-              Review a Deal / Intro Call
+              Schedule an Intro Call
             </a>
           </div>
           <p className="text-sm text-gray-500 mt-6">Join 95+ investors and get deal breakdowns plus a free newsletter.</p>
