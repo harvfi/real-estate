@@ -10,18 +10,50 @@ const App: React.FC = () => {
   const [downloadStatus, setDownloadStatus] = useState<'idle' | 'loading' | 'success'>('idle');
   const [bookingRef, setBookingRef] = useState<string>('');
 
-  const handleContactSubmit = (e: React.FormEvent) => {
+  const handleContactSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setFormStatus('sending');
 
-    // Simulate API call and generation of a formal booking reference
-    setTimeout(() => {
-      const refId = `BS-${Math.random().toString(36).substr(2, 9).toUpperCase()}`;
-      setBookingRef(refId);
-      setFormStatus('success');
-      // No automatic reset to 'idle' so user can see their confirmation ID
-    }, 1500);
+    // Collect form data
+    const formData = new FormData(e.target as HTMLFormElement);
+    const data = {
+      firstName: formData.get('firstName'),
+      lastName: formData.get('lastName'),
+      email: formData.get('email'),
+      accredited: formData.get('accredited'),
+      journey: formData.get('journey'),
+      opportunity: formData.get('opportunity'),
+      timeline: formData.get('timeline'),
+      hearAbout: formData.get('hearAbout'),
+    };
+
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        const refId = `BS-${Math.random().toString(36).substr(2, 9).toUpperCase()}`;
+        setBookingRef(refId);
+        setFormStatus('success');
+      } else {
+        console.error('Error:', result.error);
+        alert('There was an error submitting the form. Please try again or contact us directly.');
+        setFormStatus('idle');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('There was an error submitting the form. Please try again or contact us directly.');
+      setFormStatus('idle');
+    }
   };
+
 
   const handleDownload = () => {
     setDownloadStatus('loading');
@@ -191,10 +223,10 @@ const App: React.FC = () => {
                     </label>
                     <div className="grid grid-cols-2 gap-3">
                       <div>
-                        <input required type="text" placeholder="First Name" className="w-full bg-white border border-gray-400 rounded p-3 text-gray-900 placeholder-gray-500 focus:outline-none focus:border-[#002366]" />
+                        <input required type="text" name="firstName" placeholder="First Name" className="w-full bg-white border border-gray-400 rounded p-3 text-gray-900 placeholder-gray-500 focus:outline-none focus:border-[#002366]" />
                       </div>
                       <div>
-                        <input required type="text" placeholder="Last Name" className="w-full bg-white border border-gray-400 rounded p-3 text-gray-900 placeholder-gray-500 focus:outline-none focus:border-[#002366]" />
+                        <input required type="text" name="lastName" placeholder="Last Name" className="w-full bg-white border border-gray-400 rounded p-3 text-gray-900 placeholder-gray-500 focus:outline-none focus:border-[#002366]" />
                       </div>
                     </div>
                   </div>
@@ -204,7 +236,7 @@ const App: React.FC = () => {
                     <label className="text-sm font-semibold text-[#002366]">
                       Email Address <span className="text-[#002366]">*</span>
                     </label>
-                    <input required type="email" placeholder="example@example.com" className="w-full bg-white border border-gray-400 rounded p-3 text-gray-900 placeholder-gray-500 focus:outline-none focus:border-[#002366]" />
+                    <input required type="email" name="email" placeholder="example@example.com" className="w-full bg-white border border-gray-400 rounded p-3 text-gray-900 placeholder-gray-500 focus:outline-none focus:border-[#002366]" />
                   </div>
 
                   {/* Accredited Investor */}
@@ -287,7 +319,7 @@ const App: React.FC = () => {
                     <label className="text-sm font-semibold text-[#002366]">
                       How did you hear about us?
                     </label>
-                    <input type="text" placeholder="Optional" className="w-full bg-white border border-gray-400 rounded p-3 text-gray-900 placeholder-gray-500 focus:outline-none focus:border-[#002366]" />
+                    <input type="text" name="hearAbout" placeholder="Optional" className="w-full bg-white border border-gray-400 rounded p-3 text-gray-900 placeholder-gray-500 focus:outline-none focus:border-[#002366]" />
                   </div>
 
                   {/* Submit Button */}
