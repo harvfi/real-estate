@@ -3,34 +3,34 @@ import { Resend } from 'resend';
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export default async function handler(req: any, res: any) {
-    // Only allow POST requests
-    if (req.method !== 'POST') {
-        return res.status(405).json({ error: 'Method not allowed' });
+  // Only allow POST requests
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
+
+  try {
+    const {
+      firstName,
+      lastName,
+      email,
+      accredited,
+      journey,
+      opportunity,
+      timeline,
+      hearAbout
+    } = req.body;
+
+    // Validate required fields
+    if (!firstName || !lastName || !email) {
+      return res.status(400).json({ error: 'Missing required fields' });
     }
 
-    try {
-        const {
-            firstName,
-            lastName,
-            email,
-            accredited,
-            journey,
-            opportunity,
-            timeline,
-            hearAbout
-        } = req.body;
-
-        // Validate required fields
-        if (!firstName || !lastName || !email) {
-            return res.status(400).json({ error: 'Missing required fields' });
-        }
-
-        // Send notification email to site owner
-        const { data, error } = await resend.emails.send({
-            from: 'Blackstar Group <onboarding@resend.dev>',
-            to: ['blackstarholdings1@gmail.com'],
-            subject: `New Investor Network Submission - ${firstName} ${lastName}`,
-            html: `
+    // Send notification email to site owner
+    const { data, error } = await resend.emails.send({
+      from: 'Blackstar Group <onboarding@resend.dev>',
+      to: ['chehayden34@gmail.com'], // Temporary: Change to blackstarholdings1@gmail.com after verifying domain in Resend
+      subject: `New Investor Network Submission - ${firstName} ${lastName}`,
+      html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
           <div style="background-color: #002366; color: white; padding: 20px; text-align: center;">
             <h1 style="margin: 0;">🌟 New Investor Network Submission</h1>
@@ -88,19 +88,19 @@ export default async function handler(req: any, res: any) {
           </div>
         </div>
       `,
-        });
+    });
 
-        if (error) {
-            console.error('Resend error:', error);
-            return res.status(400).json({ error: error.message });
-        }
+    if (error) {
+      console.error('Resend error:', error);
+      return res.status(400).json({ error: error.message });
+    }
 
-        // Send confirmation email to user
-        await resend.emails.send({
-            from: 'The Blackstar Group <onboarding@resend.dev>',
-            to: [email],
-            subject: 'Welcome to The Blackstar Group Investor Network',
-            html: `
+    // Send confirmation email to user
+    await resend.emails.send({
+      from: 'The Blackstar Group <onboarding@resend.dev>',
+      to: [email],
+      subject: 'Welcome to The Blackstar Group Investor Network',
+      html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
           <div style="background-color: #002366; color: white; padding: 30px; text-align: center;">
             <h1 style="margin: 0; font-size: 28px;">🌟 Welcome to the Network!</h1>
@@ -146,19 +146,19 @@ export default async function handler(req: any, res: any) {
           </div>
         </div>
       `,
-        });
+    });
 
-        return res.status(200).json({
-            success: true,
-            message: 'Emails sent successfully',
-            emailId: data?.id
-        });
+    return res.status(200).json({
+      success: true,
+      message: 'Emails sent successfully',
+      emailId: data?.id
+    });
 
-    } catch (error: any) {
-        console.error('Error sending email:', error);
-        return res.status(500).json({
-            error: 'Failed to send email',
-            details: error.message
-        });
-    }
+  } catch (error: any) {
+    console.error('Error sending email:', error);
+    return res.status(500).json({
+      error: 'Failed to send email',
+      details: error.message
+    });
+  }
 }
