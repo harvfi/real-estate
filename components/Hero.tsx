@@ -31,7 +31,7 @@ const Hero: React.FC<HeroProps> = ({ linktreeUrl }) => {
               href="https://forms.gle/ahYv3GhDamQDjZCo9"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-10 py-5 bg-blue-600 text-black font-extrabold rounded hover:bg-blue-500 transition-all text-center uppercase tracking-widest"
+              className="px-10 py-5 bg-[#002366] text-white font-extrabold rounded hover:bg-[#003399] transition-all text-center uppercase tracking-widest"
             >
               See How Deals Really Work
             </a>
@@ -50,7 +50,7 @@ const Hero: React.FC<HeroProps> = ({ linktreeUrl }) => {
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 hidden md:block animate-bounce">
-        <div className="w-[1px] h-12 bg-gradient-to-b from-blue-600 to-transparent"></div>
+        <div className="w-[1px] h-12 bg-gradient-to-b from-[#002366] to-transparent"></div>
       </div>
     </div>
   );

@@ -17,19 +17,19 @@ const Header: React.FC = () => {
     <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-black/90 backdrop-blur-md py-4 shadow-lg border-b border-white/5' : 'bg-transparent py-6'}`}>
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
         <a href="#home" className="flex items-center space-x-3">
-          <img src="/images/logo-full.jpg" alt="The Blackstar Group" className="h-12" />
+          <img src="/images/logo-full.png" alt="The Blackstar Group" className="h-12" />
         </a>
 
         <nav className="hidden md:flex space-x-10 text-sm font-medium uppercase tracking-widest">
-          <a href="#home" className="hover:text-blue-600 transition-colors">Home</a>
-          <a href="#services" className="hover:text-blue-600 transition-colors">Our Investment Solutions</a>
-          <a href="#who-its-for" className="hover:text-blue-600 transition-colors">Who We Help</a>
+          <a href="#home" className="hover:text-[#002366] transition-colors">Home</a>
+          <a href="#services" className="hover:text-[#002366] transition-colors">Our Investment Solutions</a>
+          <a href="#who-its-for" className="hover:text-[#002366] transition-colors">Who We Help</a>
         </nav>
 
         <div className="hidden md:block">
           <a
             href="#contact"
-            className="px-6 py-2 bg-blue-600 text-black font-bold text-xs uppercase tracking-widest rounded hover:bg-blue-500 transition-all"
+            className="px-6 py-2 bg-[#002366] text-white font-bold text-xs uppercase tracking-widest rounded hover:bg-[#003399] transition-all"
           >
             Get Started
           </a>
@@ -49,7 +49,7 @@ const Header: React.FC = () => {
           <a href="#home" onClick={() => setMobileMenuOpen(false)} className="text-lg uppercase tracking-widest">Home</a>
           <a href="#services" onClick={() => setMobileMenuOpen(false)} className="text-lg uppercase tracking-widest">Our Investment Solutions</a>
           <a href="#who-its-for" onClick={() => setMobileMenuOpen(false)} className="text-lg uppercase tracking-widest">Who We Help</a>
-          <a href="#contact" onClick={() => setMobileMenuOpen(false)} className="px-8 py-3 bg-blue-600 text-black font-bold rounded uppercase tracking-widest">Get Started</a>
+          <a href="#contact" onClick={() => setMobileMenuOpen(false)} className="px-8 py-3 bg-[#002366] text-white font-bold rounded uppercase tracking-widest">Get Started</a>
         </div>
       )}
     </header>
