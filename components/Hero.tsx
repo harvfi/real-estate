@@ -21,7 +21,7 @@ const Hero: React.FC<HeroProps> = ({ linktreeUrl }) => {
       <div className="relative z-20 max-w-7xl mx-auto px-6 md:px-12 w-full">
         <div className="max-w-3xl">
           <h1 className="text-5xl md:text-8xl font-serif leading-tight mb-8">
-            Clarity in <span className="gradient-text italic">Multifamily</span> Investing
+            Clarity in <span className="text-[#002366] italic">Multifamily</span> Investing
           </h1>
           <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-xl leading-relaxed">
             We focus on <span className="text-[#002366]">multifamily</span> opportunities where risk is understood, assumptions are tested, and returns are built to hold up over time.
