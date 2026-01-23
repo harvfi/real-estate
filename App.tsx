@@ -111,7 +111,7 @@ const App: React.FC = () => {
               </div>
               <h3 className="text-2xl font-serif mb-4">Invest Alongside Us</h3>
               <p className="text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors">
-                Provide opportunities for new and sophisticated investors to participate alongside us in select <span className="text-[#002366]">multifamily</span> investments.
+                Provide opportunities for new and sophisticated investors to participate alongside us in select multifamily investments.
               </p>
             </div>
             <div className="glass-panel p-8 rounded-2xl hover:bg-white/5 transition-all duration-500 group border border-white/5 hover:border-[#002366]/30">
@@ -149,7 +149,7 @@ const App: React.FC = () => {
                 </div>
                 <h3 className="text-2xl font-serif mb-4">Investors</h3>
                 <p className="text-gray-400 leading-relaxed">
-                  Evaluating <span className="text-[#002366]">multifamily</span> opportunities
+                  Evaluating multifamily opportunities
                 </p>
               </div>
               <div className="text-center p-8">
@@ -199,7 +199,7 @@ const App: React.FC = () => {
                       <span className="text-[10px] uppercase tracking-widest text-gray-600 block">Confirmation ID</span>
                       <span className="font-mono text-[#002366] font-bold">{bookingRef}</span>
                     </div>
-                    <p className="text-gray-700 text-sm mb-6">Check your inbox for exclusive investment opportunities and our newsletter, <span className="text-[#002366] font-semibold">Multifamily Made Simple</span>.</p>
+                    <p className="text-gray-700 text-sm mb-6">Check your inbox for exclusive investment opportunities and our newsletter, Multifamily Made Simple.</p>
                   </div>
                   <button onClick={() => setFormStatus('idle')} className="text-[#002366] text-sm font-bold uppercase tracking-widest hover:text-[#003399] transition-colors">Submit Another Response</button>
                 </div>
@@ -212,7 +212,7 @@ const App: React.FC = () => {
                       The Blackstar Group Investor Network
                     </h2>
                     <p className="text-[#001a4d] text-sm leading-relaxed">
-                      Get access to our newsletter, <span className="text-[#002366] font-semibold">Multifamily Made Simple</span>, along with exclusive investment opportunities and insights into opportunistic <span className="text-[#002366]">multifamily</span> deals.
+                      Get access to our newsletter, Multifamily Made Simple, along with exclusive investment opportunities and insights into opportunistic multifamily deals.
                     </p>
                   </div>
 
