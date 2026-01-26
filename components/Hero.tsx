@@ -28,7 +28,7 @@ const Hero: React.FC<HeroProps> = ({ linktreeUrl }) => {
           </p>
           <div className="flex flex-col sm:flex-row gap-5">
             <a
-              href="https://forms.gle/ahYv3GhDamQDjZCo9"
+              href="https://form.jotform.com/blackstarholdings1/blackstar-group-network"
               target="_blank"
               rel="noopener noreferrer"
               className="px-10 py-5 bg-[#002366] text-white font-extrabold rounded hover:bg-[#003399] transition-all text-center uppercase tracking-widest"
